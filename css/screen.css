@@ -922,6 +922,44 @@ more padding on the right to avoid overlap
 }
 
 /*
+    Component: toggle password
+    ---
+    Visually change a checkbox into a toggle
+*/
+.c-toggle-password{
+    display:block;
+    position: relative;
+}
+.c-toggle-password__icon{
+    width: 24px;
+    height: 24px;
+    fill: var(--global-color-neutral-x-light);
+    pointer-events: none;
+    position: absolute;
+    right: 12px;
+    bottom: 25px;
+    z-index: 1;
+}
+
+.c-toggle-password__checkbox + .c-toggle-password__label .c-toggle-password__icon--hide{
+    opacity: 1;
+    
+}
+.c-toggle-password__checkbox:checked + .c-toggle-password__label .c-toggle-password__icon--hide{
+    opacity: 0;
+    
+}
+
+.c-toggle-password__checkbox + .c-toggle-password__label .c-toggle-password__icon--show{
+    opacity: 0;
+    
+}
+.c-toggle-password__checkbox:checked + .c-toggle-password__label .c-toggle-password__icon--show{
+    opacity: 1;
+    
+}
+    
+/*
     Component: Custom Select
     ---
     Custom select dropdown
